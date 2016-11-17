@@ -76,8 +76,8 @@ componentDidMount(){
           {this._sessionButton()}
           {this._sessionForm()}
         </div>
-        <div className="App-body">
-          <ul>
+        <div className="App-body container">
+          <ul className="growlUl">
             {_.map(this.state.growls, (growl, id) =>
                 <Growl user={this.state.user} id={id} growl={growl} key={id} firebase={firebase} />
             ).reverse()}
