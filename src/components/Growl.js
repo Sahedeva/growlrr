@@ -14,8 +14,7 @@ class Growl extends Component {
 }
   _sessionDelete() {
     let array = Object.keys(this.props.growl);
-    console.log(array);
-      if (this.props.user.uid === array[2]) {
+      if (array.indexOf(this.props.user.uid) {
         return <a className="btn btn-danger" href='#' onClick={this._handleDelete}>Delete</a>
       } else {
         return
@@ -24,7 +23,6 @@ class Growl extends Component {
 
   _handleDelete(e) {
     e.preventDefault();
-    console.log("deleted");
     this.props.firebase.database().ref(`/growls/${this.props.id}`).remove();
 }
 
@@ -32,7 +30,6 @@ class Growl extends Component {
     return(
     <div className="all-growls">
       <li className="list">
-      <hr/>
       <div className="container">
         <div className="row">
           <div className="col-xs-1 col-xs-offset-2">

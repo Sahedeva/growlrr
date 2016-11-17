@@ -9,7 +9,6 @@ export default class NewGrowl extends Component{
   }
 
   componentDidMount(){
-    console.log('hey!!!');
     document.getElementById('growlTextArea').focus();
     document.getElementById('growlTextArea').select();
     document.getElementById('growlLength').style.color = "green";
@@ -19,10 +18,8 @@ export default class NewGrowl extends Component{
     let len = this.refs.growl.value.length;
     console.log('len: ',len)
     if (len>141){
-      console.log('got to len >141');
       document.getElementById('growlLength').style.color = "red";
     } else {
-      console.log('got to else');
       document.getElementById('growlLength').style.color = "green";
     }
     document.getElementById('growlLength').innerHTML = 141-len;
@@ -30,10 +27,8 @@ export default class NewGrowl extends Component{
 
   _handleSubmit(e){
       e.preventDefault();
-      // let title = this.refs.title.value;
       let growl = this.refs.growl.value;
       let created_at = Date.now();
-      console.log('created_at:',created_at);
       var growlObj = {
         growl,
         [this.props.user.uid]: true,
@@ -43,29 +38,19 @@ export default class NewGrowl extends Component{
       }
       console.log(growlObj);
       this.props.firebase.database().ref(`/growls`).push(growlObj).then(()=>{
-        // this.refs.title.value = "";
         this.refs.growl.value = "";
         document.getElementById('growlLength').innerHTML = 141;
         document.getElementById('growlTextArea').focus();
         document.getElementById('growlTextArea').select();
-        // document.getElementById('titleId').focus();
-        // document.getElementById('titleId').select();
       }).catch((e)=>{
-        // let tooMany = growl.length-141;
-        // _tooLong(tooMany);
-        alert(`Your growl is ${growl.length - 141} characters too long!`);
-        console.log('e',e);
+        if(growl.length){
+          alert(`Your growl is ${growl.length - 141} characters too long!`);
+        } else {
+          alert(`Your growl can't be blank!`);
+        }
       });
-
     }
 
-// _handleClick(e){
-//   e.preventDefault()
-//   let provider = new
-//   this.props.firebase.auth.GoogleAuthProvider();
-//   this.props.firebase.auth().signInWithPopup(provider)
-// }
-/* <input type="text" ref="growl" placeholder="Enter New Growl Here"/> */
   render(){
     return(
       <div className="modal-dialog" id="popup_tool_mouseposition" data-backdrop="false">
