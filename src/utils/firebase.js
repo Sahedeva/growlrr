@@ -1,11 +1,11 @@
 import firebase from 'firebase';
 
 const config = {
-    apiKey: "AIzaSyCJ9LFNjhqZC7862W_w4b-o4RVyTjNk7j8",
-    authDomain: "growl-46ecf.firebaseapp.com",
-    databaseURL: "https://growl-46ecf.firebaseio.com",
-    storageBucket: "growl-46ecf.appspot.com",
-    messagingSenderId: "296409813010"
+  apiKey: process.env.REACT_APP_FBAPIKEY1,
+  authDomain: process.env.REACT_APP_FBAUTHDOMAIN1,
+  databaseURL: process.env.REACT_APP_FBDATABASEURL1,
+  storageBucket: process.env.REACT_APP_FBSTORAGEBUCKET1,
+  messagingSenderId: process.env.REACT_APP_FBMESSAGINGSENDERID1
   };
 
 firebase.initializeApp(config);
