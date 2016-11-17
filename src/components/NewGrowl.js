@@ -16,7 +16,6 @@ export default class NewGrowl extends Component{
 
   _handleChange(e){
     let len = this.refs.growl.value.length;
-    console.log('len: ',len)
     if (len>141){
       document.getElementById('growlLength').style.color = "red";
     } else {
@@ -36,7 +35,6 @@ export default class NewGrowl extends Component{
         userAvatar: this.props.user.photoURL,
         created_at
       }
-      console.log(growlObj);
       this.props.firebase.database().ref(`/growls`).push(growlObj).then(()=>{
         this.refs.growl.value = "";
         document.getElementById('growlLength').innerHTML = 141;
