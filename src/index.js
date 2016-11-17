@@ -8,21 +8,26 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import {Router, Route, IndexRoute, hashHistory} from 'react-router';
-// import Home from './Home';
-// import App from './App';
-// import Comments from './Comments'
-// import './index.css';
-//
-// ReactDOM.render(
-//   <Router history={hashHistory} >
-//     <Route path='/' component={Home} >
-//       <IndexRoute component={App} />
-//       <Route path='comments' component={Comments} />
-//     </Route>
-//   </Router>,
-//   document.getElementById('root')
-// );
+console.log("             *     ,MMM8&&&.            *");
+console.log("                  MMMM88&&&&&    .");
+console.log("                 MMMM88&&&&&&&");
+console.log("     *           MMM88&&&&&&&&");
+console.log("                 MMM88&&&&&&&&");
+console.log("                 'MMM88&&&&&&'");
+console.log("                   'MMM8&&&'      *");
+console.log("          |\\___/|");
+console.log("          )     (             .              '");
+console.log("         =\\     /=");
+console.log("           )===(       *");
+console.log("          /     \\");
+console.log("          |     |");
+console.log("         /       \\");
+console.log("         \\       /");
+console.log("  _/\\_/\\_/\\__  _/_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_");
+console.log("  |  |  |  |( (  |  |  |  |  |  |  |  |  |  |");
+console.log("  |  |  |  | ) ) |  |  |  |  |  |  |  |  |  |");
+console.log("  |  |  |  |(_(  |  |  |  |  |  |  |  |  |  |");
+console.log("  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |");
+console.log("  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |");
+console.log(" ");
+console.log("         consoleCat - by Bob   (MEOW)");
