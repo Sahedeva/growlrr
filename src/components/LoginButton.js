@@ -14,6 +14,6 @@ export default class LoginButton extends Component{
   }
 
   render(){
-    return(<button onClick={this._handleClick} className="btn btn-success btn-lg pull-right vcent">{this.props.children}</button>)
+    return(<button onClick={this._handleClick} className="btn btn-success btn-lg pull-right login-btn">{this.props.children}</button>)
   }
 }

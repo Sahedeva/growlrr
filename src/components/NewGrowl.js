@@ -58,7 +58,7 @@ export default class NewGrowl extends Component{
         </div>
         <div className="modal-body">
           <form id="growlForm" onSubmit={this._handleSubmit} onChange={this._handleChange}>
-            <textarea id="growlTextArea" rows="4" cols="70" ref="growl" name="growl" form="growlForm" placeholder="Enter New Growl Here"></textarea>
+            <textarea id="growlTextArea" rows="2" cols="55" ref="growl" name="growl" form="growlForm" placeholder="Enter New Growl Here"></textarea>
             <div className="NewGrowlButton">
               <span id='growlLength'>141</span>
               <button className="btn btn-success" type="submit"><span className="glyphicon glyphicon-flash" aria-hidden="true"></span>Growl!</button>

@@ -14,9 +14,14 @@ class Growl extends Component {
 }
   _sessionDelete() {
     let array = Object.keys(this.props.growl);
-      if (array.indexOf(this.props.user.uid)) {
+    console.log('growl - array: ',array);
+    console.log('this.props.user.uid: ',this.props.user.uid);
+    console.log("array.indexOf(this.props.user.uid): ",array.indexOf(this.props.user.uid));
+      if (array.indexOf(this.props.user.uid)>-1) {
+        console.log('hitting if');
         return <a className="btn btn-danger" href='#' onClick={this._handleDelete}>Delete</a>
       } else {
+        console.log('hitting else');
         return
       }
 }
@@ -32,11 +37,11 @@ class Growl extends Component {
       <li className="list">
         <div className="row">
           <div className="col-xs-1 col-xs-offset-2">
-          <img src={this.props.growl.userAvatar} className="avatar" role="presentation"/>
+          <img src={this.props.growl.userAvatar} className="growl-avatar" role="presentation"/>
           </div>
           <div className="col-xs-7">
             <div className="row">
-              <div className="col-xs-12">
+              <div className="col-xs-12 growl-name">
                 {this.props.growl.username}
                 {'  '}
                 <span className="glyphicon glyphicon-hourglass"></span>
@@ -46,7 +51,7 @@ class Growl extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-xs-12">
+              <div className="col-xs-12 growl-text">
                 <pre>{this.props.growl.growl}</pre>
               </div>
             </div>

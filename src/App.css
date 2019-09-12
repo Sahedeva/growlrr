@@ -11,9 +11,12 @@ body{
   background-color: beige;
   color: black;
   padding: 1px;
-  margin-bottom: -20px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.modal-title {
+  margin-left: 20px;
 }
 
 .modal-body {
@@ -23,8 +26,7 @@ body{
 }
 
 .modal-dialog {
-  margin-top: 0px;
-  top: -15px;
+  margin-top: -15px;
 }
 
 .all-growls{
@@ -33,8 +35,9 @@ body{
 }
 
 .delete-link{
-  position: absolute;
-  top: 20px;
+  position: relative;
+  top: 12px;
+  left: 25px;
 }
 
 .header{
@@ -100,6 +103,12 @@ body{
   padding-right: 5px;
 }
 
+.login-btn {
+  position: relative;
+  left: 22%;
+  margin-top: 45px;
+}
+
 .App {
   text-align: center;
   color: white;
@@ -111,9 +120,9 @@ body{
 }
 
 .vcent {
-  position: absolute;
-  top: 65px;
-  left: 84%;
+  position: relative;
+  top: -16px;
+  left: 12%;
 }
 
 .loginImg {
@@ -126,9 +135,8 @@ body{
 
 .loginTitle {
   color: red;
-  position: absolute;
-  top: 75px;
-  left: 7%;
+  margin-left: -12%;
+  margin-top: -10%;
   font-size: 60px;
 }
 
@@ -136,13 +144,13 @@ body{
   color: gold;
   position: absolute;
   top: 35px;
-  left: 40%;
+  left: 25%;
   font-size: 75px;
 }
 
 .App-header {
   background-color: #222;
-  height: 176px;
+  height: 265px;
   width:100%;
   padding: 20px;
   color: white;
@@ -158,7 +166,7 @@ pre {
 }
 
 .App-body {
-  padding-top: 137px;
+  padding-top: 230px;
 }
 
 .App-intro {
@@ -173,7 +181,31 @@ pre {
 .avatar {
   width: 48px;
   height: 48px;
+  margin-left: 10px;
+  margin-top: -35px;
   border-radius: 5px;
+}
+
+.growl-avatar {
+  width: 48px;
+  height: 48px;
+  margin-left: 10px;
+  margin-top: -5px;
+  border-radius: 5px;
+}
+
+.growl-name {
+  margin-left: 25px;
+}
+
+.growl-text {
+  margin-left: 25px;
+}
+
+#avatar-name{
+  position: relative;
+  bottom: 15px;
+  margin-left: 10px;
 }
 
 textarea {

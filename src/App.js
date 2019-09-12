@@ -69,11 +69,13 @@ componentDidMount(){
       <div className="App">
         <div className="App-header">
           <div className="pull-left">
-            <img id="headImg" src={this.state.user.photoURL} className="avatar" role="presentation"/>  {this.state.user.displayName}
-            <span id="title">Growlrr</span>
+          <span id="title">Growlrr</span>
+            <img id="headImg" src={this.state.user.photoURL} className="avatar" role="presentation"/>
+            <span id="avatar-name">{this.state.user.displayName}</span>
+            {this._sessionButton()}
           </div>
 
-          {this._sessionButton()}
+          
           {this._sessionForm()}
         </div>
         <div className="App-body container">
